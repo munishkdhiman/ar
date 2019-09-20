@@ -16,9 +16,7 @@
 
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
 	<h1>Test5</h1>
-	
-<button onclick="playVid()" type="button">Play Video 2</button>
-<button onclick="pauseVid()" type="button">Pause Video 2</button><br> 
+
 
 <video id="myVideo" width="320" height="176">
   <source src="video/rs.mp4" type="video/mp4">
@@ -163,6 +161,10 @@ function animate()
 	render();
 }
 </script>
-
+	
+<div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
+<button onclick="playVid()" type="button">Play Video 3</button>
+<button onclick="pauseVid()" type="button">Pause Video 3</button><br> 
+</div>	
 </body>
 </html>

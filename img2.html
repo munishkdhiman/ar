@@ -133,10 +133,10 @@ function initialize()
 	
 	mesh1 = new THREE.Mesh( geometry1, material1 );
 	mesh1.rotation.x = -Math.PI/2;
-	mesh1.position.y = 0.25;
 	
 	mesh2 = new THREE.Mesh( geometry2, material2 );
 	mesh2.rotation.x = -Math.PI/2;
+	mesh2.position.y = 0.05;
 	
 	markerRoot1.add( mesh1 );
 	markerRoot1.add( mesh2 );
@@ -163,8 +163,8 @@ function animate()
 </script>
 	
 <div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
-<button onclick="playVid()" type="button">Play Video 5</button>
-<button onclick="pauseVid()" type="button">Pause Video 5</button><br> 
+<button onclick="playVid()" type="button">Play Video 6</button>
+<button onclick="pauseVid()" type="button">Pause Video 6</button><br> 
 </div>	
 </body>
 </html>

@@ -15,7 +15,7 @@
 </head>
 
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
-	<h1>Hello3</h1>
+	<h1>Hello4</h1>
 <!-- 
   Example created by Lee Stemkoski: https://github.com/stemkoski
   Based on the AR.js library and examples created by Jerome Etienne: https://github.com/jeromeetienne/AR.js/
@@ -137,12 +137,13 @@ function initialize()
 	
 	mesh1 = new THREE.Mesh( geometry1, material1 );
 	mesh1.rotation.x = Math.PI/2;
+	mesh1.scale.set(1.5,1.5,1.5);
 	
-	
-    mesh2 = new THREE.Mesh( geometry2, material2 );
+        mesh2 = new THREE.Mesh( geometry2, material2 );
 	mesh2.rotation.x = -Math.PI/2;
 	mesh2.position.y = 0.25;
-	mesh2.scale.set(1.5,1.5,1.5);
+	mesh2.position.z = 0.25;
+	mesh2.position.x = 0.25;
 	
 	markerRoot1.add( mesh1 );
 	markerRoot1.add( mesh2 );

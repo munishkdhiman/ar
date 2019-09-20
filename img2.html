@@ -148,9 +148,11 @@ function update()
 	if ( arToolkitSource.ready !== false )
 	{
 		arToolkitContext.update( arToolkitSource.domElement );
+		document.getElementById("demo").innerHTML = "a";
 	}
 	else
-	{	
+	{
+		document.getElementById("demo").innerHTML = "b";
 	}
 }
 function render()

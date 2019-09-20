@@ -15,7 +15,7 @@
 </head>
 
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
-	<h1>Test5</h1>
+	<h1 id="demo">Test5</h1>
 
 
 <video id="myVideo" width="320" height="176" style="display:none">
@@ -146,7 +146,14 @@ function update()
 {
 	// update artoolkit on every frame
 	if ( arToolkitSource.ready !== false )
+	{
 		arToolkitContext.update( arToolkitSource.domElement );
+		 document.getElementById("demo").innerHTML = a;
+	}
+	else
+	{
+		 document.getElementById("demo").innerHTML = b;		
+	}
 }
 function render()
 {

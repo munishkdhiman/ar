@@ -106,7 +106,7 @@ function initialize()
 	let texture = loader.load( 'images/stage3.png', render );
 	let material1 = new THREE.MeshBasicMaterial( { map: texture } );
 	
-	let geometry2 = new THREE.PlaneBufferGeometry(2,1, 4,4);
+	let geometry2 = new THREE.PlaneBufferGeometry(1.5,1.5, 4,4);
 	
 	let video = document.getElementById( 'video' );
 	let texture2 = new THREE.VideoTexture( video );

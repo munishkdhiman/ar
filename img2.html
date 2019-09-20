@@ -34,6 +34,18 @@ function playVid() {
 function pauseVid() { 
   vid.pause(); 
 } 
+	
+	
+var m = document.querySelector("a-marker")
+m.addEventListener("markerFound", (e)=>{
+	document.getElementById("demo").innerHTML = "a";
+})
+
+m.addEventListener("markerLost", (e)=>{
+  	document.getElementById("demo").innerHTML = "b";
+	
+})
+	
 </script> 
 
 	
@@ -148,11 +160,9 @@ function update()
 	if ( arToolkitSource.ready !== false )
 	{
 		arToolkitContext.update( arToolkitSource.domElement );
-		document.getElementById("demo").innerHTML = "a";
 	}
 	else
 	{
-		document.getElementById("demo").innerHTML = "b";
 	}
 }
 function render()

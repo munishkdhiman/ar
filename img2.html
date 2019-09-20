@@ -17,10 +17,25 @@
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
 	<h1>Test4</h1>
 	
-	<video id="video" autoplay loop crossOrigin="anonymous" webkit-playsinline style="display:none">
-	<source src="video/rs.ogv" type='video/ogg; codecs="theora, vorbis"'>
+	<button onclick="playVid()" type="button">Play Video</button>
+        <button onclick="pauseVid()" type="button">Pause Video</button><br> 
+
+        <video id="video" style="display:none">
+        <source src="video/rs.ogv" type='video/ogg; codecs="theora, vorbis"'>
 	<source src="video/rs.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-        </video>
+	</video>
+	
+	<script> 
+var vid = document.getElementById("video"); 
+
+function playVid() { 
+  vid.play(); 
+} 
+
+function pauseVid() { 
+  vid.pause(); 
+} 
+</script> 
 	
 <!-- 
   Example created by Lee Stemkoski: https://github.com/stemkoski

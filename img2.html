@@ -102,11 +102,11 @@ function initialize()
 	let markerControls1 = new THREEx.ArMarkerControls(arToolkitContext, markerRoot1, {
 		type: 'pattern', patternUrl: "data/hiro.patt",
 	})
-	let geometry1 = new THREE.PlaneBufferGeometry(1,1, 4,4);let loader = new THREE.TextureLoader();
+	let geometry1 = new THREE.PlaneBufferGeometry(2,2, 4,4);let loader = new THREE.TextureLoader();
 	let texture = loader.load( 'images/stage2.png', render );
 	let material1 = new THREE.MeshBasicMaterial( { map: texture } );
 	
-	let geometry2 = new THREE.PlaneBufferGeometry(1,1, 4,4);
+	let geometry2 = new THREE.PlaneBufferGeometry(2,2, 4,4);
 	
 	let video = document.getElementById( 'video' );
 	let texture2 = new THREE.VideoTexture( video );

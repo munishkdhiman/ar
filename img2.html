@@ -18,7 +18,7 @@
 	<h1>Test5</h1>
 
 
-<video id="myVideo" width="320" height="176">
+<video id="myVideo" width="320" height="176" style="display:none">
   <source src="video/rs.mp4" type="video/mp4">
   <source src="video/rs.ogv" type="video/ogg">
   Your browser does not support HTML5 video.
@@ -121,7 +121,7 @@ function initialize()
 	let texture = loader.load( 'images/stage3.png', render );
 	let material1 = new THREE.MeshBasicMaterial( { map: texture } );
 	
-	let geometry2 = new THREE.PlaneBufferGeometry(1.5,1.5, 4,4);
+	let geometry2 = new THREE.PlaneBufferGeometry(2,1.5, 4,4);
 	
 	let video = document.getElementById( 'myVideo' );
 	let texture2 = new THREE.VideoTexture( video );
@@ -163,8 +163,8 @@ function animate()
 </script>
 	
 <div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
-<button onclick="playVid()" type="button">Play Video 3</button>
-<button onclick="pauseVid()" type="button">Pause Video 3</button><br> 
+<button onclick="playVid()" type="button">Play Video 4</button>
+<button onclick="pauseVid()" type="button">Pause Video 4</button><br> 
 </div>	
 </body>
 </html>

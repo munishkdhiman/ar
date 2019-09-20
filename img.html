@@ -15,16 +15,12 @@
 </head>
 
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
-	<h1>Hello6</h1>
+
+	<h1>H1</h1>
 <!-- 
   Example created by Lee Stemkoski: https://github.com/stemkoski
   Based on the AR.js library and examples created by Jerome Etienne: https://github.com/jeromeetienne/AR.js/
 -->
-<video id="video" autoplay loop crossOrigin="anonymous" webkit-playsinline style="display:none">
-	<source src="video/rs.ogv" type='video/ogg; codecs="theora, vorbis"'>
-	<source src="video/rs.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-</video>
-
 
 <script>
 
@@ -119,33 +115,15 @@ function initialize()
 
 	let geometry1 = new THREE.PlaneBufferGeometry(1,1, 4,4);
 	let loader = new THREE.TextureLoader();
-	let texture = loader.load( 'images/sand.jpg', render );
+	let texture = loader.load( 'images/stage2.jpg', render );
 	let material1 = new THREE.MeshBasicMaterial( { map: texture } );
 	
-	
-	
-	let geometry2 = new THREE.PlaneBufferGeometry(2,2, 4,4);
-
-	let video = document.getElementById( 'video' );
-	let texture2 = new THREE.VideoTexture( video );
-	texture2.minFilter = THREE.LinearFilter;
-	texture2.magFilter = THREE.LinearFilter;
-	texture2.format = THREE.RGBFormat;
-	let material2 = new THREE.MeshBasicMaterial( { map: texture2 } );
-	
-	
-	
+		
 	mesh1 = new THREE.Mesh( geometry1, material1 );
 	mesh1.rotation.x = Math.PI/2;
 	
-        mesh2 = new THREE.Mesh( geometry2, material2 );
-	mesh2.rotation.x = -Math.PI/2;
-	mesh2.position.y = 0.25;
-	mesh2.position.z = 0.25;
-	mesh2.position.x = 0.25;
 	
 	markerRoot1.add( mesh1 );
-	//markerRoot1.add( mesh2 );
 }
 
 

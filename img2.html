@@ -133,10 +133,10 @@ function initialize()
 	
 	mesh1 = new THREE.Mesh( geometry1, material1 );
 	mesh1.rotation.x = -Math.PI/2;
+	mesh1.position.y = 0.25;
 	
 	mesh2 = new THREE.Mesh( geometry2, material2 );
 	mesh2.rotation.x = -Math.PI/2;
-	mesh2.position.y = 0.25;
 	
 	markerRoot1.add( mesh1 );
 	markerRoot1.add( mesh2 );

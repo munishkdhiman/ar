@@ -25,11 +25,9 @@
 
 <script> 
 var vid = document.getElementById("myVideo"); 
-
 function playVid() { 
   vid.play(); 
 } 
-
 function pauseVid() { 
   vid.pause(); 
 } 
@@ -39,7 +37,6 @@ var m = document.querySelector("a-marker")
 m.addEventListener("markerFound", (e)=>{
 	document.getElementById("demo").innerHTML = "a";
 })
-
 m.addEventListener("markerLost", (e)=>{
   	document.getElementById("demo").innerHTML = "b";
 	
@@ -178,7 +175,7 @@ function animate()
 }
 </script>
 	
-<div style='width:100%; text-align: center; z-index: 1;'>
+<div style='position: fixed; vertical-align: bottom; width:100%; text-align: center; z-index: 1;'>
 <button onclick="playVid()"  type="button">Start Experience</button> 
 </div>	
 </body>

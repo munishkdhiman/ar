@@ -15,7 +15,7 @@
 </head>
 
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
-	<h1>Test4</h1>
+	<h1>Test5</h1>
 	
 	<video id="video" autoplay loop crossOrigin="anonymous" webkit-playsinline style="display:none">
 	<source src="video/rs.ogv" type='video/ogg; codecs="theora, vorbis"'>
@@ -102,9 +102,8 @@ function initialize()
 	let markerControls1 = new THREEx.ArMarkerControls(arToolkitContext, markerRoot1, {
 		type: 'pattern', patternUrl: "data/hiro.patt",
 	})
-	let geometry1 = new THREE.PlaneBufferGeometry(1,1, 5,5);
-	let loader = new THREE.TextureLoader();
-	let texture = loader.load( 'images/stage.png', render );
+	let geometry1 = new THREE.PlaneBufferGeometry(1,1, 4,4);let loader = new THREE.TextureLoader();
+	let texture = loader.load( 'images/stage2.png', render );
 	let material1 = new THREE.MeshBasicMaterial( { map: texture } );
 	
 	let geometry2 = new THREE.PlaneBufferGeometry(1,1, 4,4);
@@ -121,11 +120,7 @@ function initialize()
 	mesh1.rotation.x = -Math.PI/2;
 	
 	
-        mesh2 = new THREE.Mesh( geometry2, material2 );
-	mesh2.rotation.x = -Math.PI/2;
-	mesh2.position.y = 0.25;
-	
-	markerRoot1.add( mesh2 );
+      
 	markerRoot1.add( mesh1 );
 }
 function update()

@@ -17,14 +17,17 @@
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
 	<h1>Test5</h1>
 	
-	
-        <video id="video" style="display:none">
-        <source src="video/rs.ogv" type='video/ogg; codecs="theora, vorbis"'>
-	<source src="video/rs.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-	</video>
-	
-	<script> 
-var vid = document.getElementById("video"); 
+<button onclick="playVid()" type="button">Play Video 2</button>
+<button onclick="pauseVid()" type="button">Pause Video 2</button><br> 
+
+<video id="myVideo" width="320" height="176">
+  <source src="video/rs.mp4" type="video/mp4">
+  <source src="video/rs.ogv" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
+
+<script> 
+var vid = document.getElementById("myVideo"); 
 
 function playVid() { 
   vid.play(); 
@@ -34,6 +37,7 @@ function pauseVid() {
   vid.pause(); 
 } 
 </script> 
+
 	
 <!-- 
   Example created by Lee Stemkoski: https://github.com/stemkoski
@@ -60,7 +64,7 @@ function initialize()
 		alpha: true
 	});
 	renderer.setClearColor(new THREE.Color('lightgrey'), 0)
-	renderer.setSize( 960, 540 );
+	renderer.setSize( 640, 480 );
 	renderer.domElement.style.position = 'absolute'
 	renderer.domElement.style.top = '0px'
 	renderer.domElement.style.left = '0px'
@@ -121,7 +125,7 @@ function initialize()
 	
 	let geometry2 = new THREE.PlaneBufferGeometry(1.5,1.5, 4,4);
 	
-	let video = document.getElementById( 'video' );
+	let video = document.getElementById( 'myVideo' );
 	let texture2 = new THREE.VideoTexture( video );
 	texture2.minFilter = THREE.LinearFilter;
 	texture2.magFilter = THREE.LinearFilter;

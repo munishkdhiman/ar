@@ -102,11 +102,11 @@ function initialize()
 	let markerControls1 = new THREEx.ArMarkerControls(arToolkitContext, markerRoot1, {
 		type: 'pattern', patternUrl: "data/hiro.patt",
 	})
-	let geometry1 = new THREE.PlaneBufferGeometry(3,3, 4,4);let loader = new THREE.TextureLoader();
+	let geometry1 = new THREE.PlaneBufferGeometry(4,4, 4,4);let loader = new THREE.TextureLoader();
 	let texture = loader.load( 'images/stage2.png', render );
 	let material1 = new THREE.MeshBasicMaterial( { map: texture } );
 	
-	let geometry2 = new THREE.PlaneBufferGeometry(3,3, 4,4);
+	let geometry2 = new THREE.PlaneBufferGeometry(2,2, 4,4);
 	
 	let video = document.getElementById( 'video' );
 	let texture2 = new THREE.VideoTexture( video );
@@ -119,9 +119,13 @@ function initialize()
 	mesh1 = new THREE.Mesh( geometry1, material1 );
 	mesh1.rotation.x = -Math.PI/2;
 	
+	mesh2 = new THREE.Mesh( geometry2, material2 );
+	mesh2.rotation.x = -Math.PI/2;
+	mesh2.position.y = 0.25;
 	
-      
 	markerRoot1.add( mesh1 );
+	markerRoot1.add( mesh2 );
+      
 }
 function update()
 {

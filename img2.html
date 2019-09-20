@@ -15,7 +15,7 @@
 </head>
 
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
-	<h1>Test3</h1>
+	<h1>Test4</h1>
 	
 	<video id="video" autoplay loop crossOrigin="anonymous" webkit-playsinline style="display:none">
 	<source src="video/rs.ogv" type='video/ogg; codecs="theora, vorbis"'>
@@ -123,6 +123,8 @@ function initialize()
 	let texture = loader.load( 'images/sand.jpg', render );
 	let material1 = new THREE.MeshBasicMaterial( { map: texture } );
 	
+	let geometry2 = new THREE.PlaneBufferGeometry(1,1, 4,4);
+	
 	let video = document.getElementById( 'video' );
 	let texture2 = new THREE.VideoTexture( video );
 	texture2.minFilter = THREE.LinearFilter;
@@ -134,7 +136,7 @@ function initialize()
 	mesh1 = new THREE.Mesh( geometry1, material1 );
 	mesh1.rotation.x = -Math.PI/2;
 	
-        mesh2 = new THREE.Mesh( geometry2, material2 );
+        mesh2 = new THREE.Mesh( geometry2, material1 );
 	mesh2.rotation.x = -Math.PI;
 	
 	markerRoot1.add( mesh1 );

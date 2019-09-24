@@ -6,19 +6,44 @@
       <!-- Compiled and minified CSS -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
       <!-- Compiled and minified JavaScript -->
-	      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
    </head>
-   <body>
+	<body>
       <div class="carousel">
-         <a class="carousel-item" href="#one!"><img src="royal-stag.png"></a>
-         <a class="carousel-item" href="#two!"><img src="royal-stag.png"></a>
-         <a class="carousel-item" href="#three!"><img src="royal-stag.png"></a>
-         <a class="carousel-item" href="#four!"><img src="royal-stag.png"></a>
-         <a class="carousel-item" href="#five!"><img src="royal-stag.png"></a>
-         <a class="carousel-item" href="#six!"><img src="royal-stag.png"></a>
-         <a class="carousel-item" href="#seven!"><img src="royal-stag.png"></a>
-         <a class="carousel-item" href="#eight!"><img src="royal-stag.png"></a>
+		  <h1 style="color: #B79B2D;text-align: center;font-family:'Lucida Bright'">Select Destination</h1>
+         <a class="carousel-item" href="#one!">
+			 <img src="royal-stag.png">
+			 <h4>Location 1</h4>
+		  </a>
+         <a class="carousel-item" href="#two!">
+			 <img src="royal-stag.png">
+			 <h4>Location 2</h4>
+		  </a>
+         <a class="carousel-item" href="#three!">
+			 <img src="royal-stag.png">
+			 <h4>Location 3</h4>
+		  </a>
+         <a class="carousel-item" href="#four!">
+			 <img src="royal-stag.png">
+			 <h4>Location 4</h4>
+		  </a>
+         <a class="carousel-item" href="#five!">
+			 <img src="royal-stag.png">
+			 <h4>Location 5</h4>
+		  </a>
+         <a class="carousel-item" href="#six!">
+			 <img src="royal-stag.png">
+			 <h4>Location 6</h4>
+		  </a>
+         <a class="carousel-item" href="#seven!">
+			 <img src="royal-stag.png">
+			 <h4>Location 7</h4>
+		  </a>
+         <a class="carousel-item" href="#eight!">
+			 <img src="royal-stag.png">
+			 <h4>Location 8</h4>
+		  </a>
       </div>
    </body>
 </html>
@@ -28,7 +53,8 @@
 	body{
 		margin: 0;
 		padding: 0;
-		background: #212;
+		
+		background-image:url("Background.jpg")
 	}
 	.carousel{
 		width: 100%;
@@ -37,16 +63,31 @@
 	}
 	.carousel .carousel-item
 	{
-		height: 100vh;
+		height: auto;
 	}
 	.carousel .carousel-item img
 	{
-		width: 100%;
+	width: 100%;
+	-webkit-box-reflect: below 0px -webkit-gradient(linear, right top, right bottom, from(transparent), to(rgba(255, 255, 255, 0.4)));
+	}
+	.carousel .carousel-item h4
+	{
+		margin: -5px 0 0;
+		padding: 0;
+		
+		color:#fff;
+		box-sizing:content-box;
+		padding: 10px 5px;
+		font-weight:normal;
+		font-size: 1.8em;
+		font-family:"Segoe UI";			
+		text-align: center;
 	}
 	
+   
 </style>
 
-                                        <!-- Java script start here -->
+                                        
 <script>
    document.addEventListener('DOMContentLoaded', function() {
      var elems = document.querySelectorAll('.carousel');
@@ -56,8 +97,10 @@
    // Or with jQuery
    
    $(document).ready(function(){
-     $('.carousel').carousel();
-	   numVisible: 8,
+     $('.carousel').carousel({
+      numVisible: 8,
+      
+     });
    });
    
 </script>

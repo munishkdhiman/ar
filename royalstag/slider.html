@@ -12,38 +12,38 @@
 	<body>
       <div class="carousel">
 		  <h1 style="color: #B79B2D;text-align: center;font-family:'Lucida Bright'">Select Destination</h1>
-         <a class="carousel-item" href="#one!">
-			 <img src="royal-stag.png">
+         <div id="Loc1" class="carousel-item" onClick="Select1()">
+			 <img id="img1" src="royal-stag.png" >
 			 <h4>Location 1</h4>
-		  </a>
-         <a class="carousel-item" href="#two!">
-			 <img src="royal-stag.png">
+		  </div>
+        <div id="Loc2"  class="carousel-item" onClick="Select2()">
+			 <img src="royal-stag.png" >
 			 <h4>Location 2</h4>
-		  </a>
-         <a class="carousel-item" href="#three!">
-			 <img src="royal-stag.png">
+		  </div>
+        <div id="Loc3" class="carousel-item" onClick="Select3()">
+			 <img src="royal-stag.png" >
 			 <h4>Location 3</h4>
-		  </a>
-         <a class="carousel-item" href="#four!">
-			 <img src="royal-stag.png">
+		  </div>
+        <div id="Loc4" class="carousel-item" onClick="Select4()">
+			 <img  src="royal-stag.png" >
 			 <h4>Location 4</h4>
-		  </a>
-         <a class="carousel-item" href="#five!">
-			 <img src="royal-stag.png">
+		  </div>
+         <div id="Loc5" class="carousel-item" onClick="Select5()">
+			 <img src="royal-stag.png" >
 			 <h4>Location 5</h4>
-		  </a>
-         <a class="carousel-item" href="#six!">
+		  </div>
+        <div id="Loc6" class="carousel-item" onClick="Select6()" >
 			 <img src="royal-stag.png">
 			 <h4>Location 6</h4>
-		  </a>
-         <a class="carousel-item" href="#seven!">
+		  </div>
+        <div id="Loc7" class="carousel-item" onClick="Select7()">
 			 <img src="royal-stag.png">
 			 <h4>Location 7</h4>
-		  </a>
-         <a class="carousel-item" href="#eight!">
+		  </div>
+         <div id="Loc8" class="carousel-item" onClick="Select8()">
 			 <img src="royal-stag.png">
 			 <h4>Location 8</h4>
-		  </a>
+		  </div>
       </div>
    </body>
 </html>
@@ -53,7 +53,6 @@
 	body{
 		margin: 0;
 		padding: 0;
-		
 		background-image:url("Background.jpg")
 	}
 	.carousel{
@@ -66,7 +65,7 @@
 		height: 100%;
 		display: block;
    		-ms-touch-action: auto;
-       		touch-action: auto;
+        touch-action: auto;
 	}
 	.carousel .carousel-item img
 	{
@@ -76,8 +75,7 @@
 	.carousel .carousel-item h4
 	{
 		margin: -5px 0 0;
-		padding: 0;
-		
+		padding: 0;		
 		color:#fff;
 		box-sizing:content-box;
 		padding: 10px 5px;
@@ -105,5 +103,42 @@
       
      });
    });
+	
+	
+	function Select1()
+	{
+		var element1 = document.getElementById( "Loc1" );
+        var element2 = document.getElementById( "Loc2" );
+        var element3 = document.getElementById( "Loc3" );
+        var element4 = document.getElementById( "Loc4" );
+        var element5 = document.getElementById( "Loc5" );
+        var element6 = document.getElementById( "Loc6" );
+        var element7 = document.getElementById( "Loc7" );
+		var element8 = document.getElementById( "Loc8" );
+		
+    	 var pos = 0;    
+        var sca=0;  
+        var id = setInterval(frame, .001);  
+        function frame()
+        {    
+            if (pos == screen.width)
+            {      
+                clearInterval(id);    
+            } 
+            else 
+            {     
+                pos=pos+20;    
+                sca=1.2;     
+                element2.style.left = pos + 'px';      
+                element3.style.left = pos + 'px';   
+				element4.style.left = pos + 'px';      
+                element5.style.left = pos + 'px'; 
+				element6.style.left = -pos + 'px';   
+				element7.style.left = -pos + 'px';      
+                element8.style.left = -pos + 'px'; 
+               //ement1.style.transform = "scale("+sca+","+sca+")";    
+            }  
+        }
+	}
    
 </script>
